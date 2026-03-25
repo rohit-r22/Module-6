@@ -30,13 +30,31 @@ To write a Python program to perform division of two complex numbers using the b
 ---
 
 ### PROGRAM
-
 ```
+class Complex:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
 
+    def __add__(self, other):
+        return Complex(self.real + other.real, self.imag + other.imag)
+
+    def __str__(self):
+        return f"({self.real}, {self.imag})"
+
+# Creating objects
+obj1 = Complex(1, 2)
+obj2 = Complex(2, 3)
+
+# Performing addition using overloaded + operator
+result = obj1 + obj2
+
+# Printing the result
+print(result)
 ```
-
 ### OUTPUT
-
+![image](https://github.com/user-attachments/assets/e801cf24-33be-40de-a5ed-db9e0ffa449a)
 
 ### RESULT
+Thus the python program to perform addition of two complex numbers using the binary '+' operator overloading has been implemented and executed successfully.
 
